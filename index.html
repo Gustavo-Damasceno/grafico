@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Futurista de Redes Sociais - Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Redes Sociais em 2024 (Tempo Real)</h1>
+        <canvas id="socialMediaChart"></canvas>
+    </div>
+
+    <script>
+        // Inicializando o gráfico
+        const ctx = document.getElementById('socialMediaChart').getContext('2d');
+        let socialMediaChart = null;
+
+        // Função para buscar dados de uma API (simulação neste exemplo)
+        function fetchSocialMediaData() {
+            // Simulando dados em tempo real (substitua essa parte com uma API real)
+            const data = {
+                labels: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn', 'TikTok'],
+                datasets: [{
+                    label: 'Usuários em milhões',
+                    data: [
+                        Math.floor(Math.random() * 1500) + 500,  // Instagram
+                        Math.floor(Math.random() * 2500) + 1000, // Facebook
+                        Math.floor(Math.random() * 700) + 300,   // Twitter
+                        Math.floor(Math.random() * 1000) + 200,  // LinkedIn
+                        Math.floor(Math.random() * 1500) + 500   // TikTok
+                    ],
+                    backgroundColor: [
+                        'rgba(0, 255, 255, 0.6)',
+                        'rgba(255, 0, 255, 0.6)',
+                        'rgba(0, 255, 132, 0.6)',
+                        'rgba(255, 255, 0, 0.6)',
+                        'rgba(132, 0, 255, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(0, 255, 255, 1)',
+                        'rgba(255, 0, 255, 1)',
+                        'rgba(0, 255, 132, 1)',
+                        'rgba(255, 255, 0, 1)',
+                        'rgba(132, 0, 255, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            };
+            return data;
+        }
+
+        // Função para atualizar o gráfico com novos dados
+        function updateChart() {
+            const newData = fetchSocialMediaData();
+
+            if (socialMediaChart) {
+                socialMediaChart.data.datasets[0].data = newData.datasets[0].data;
+                socialMediaChart.update();
+            } else {
+                socialMediaChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: newData,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#00ffcc',
+                                    font: {
+                                        size: 16,
+                                        family: "'Orbitron', sans-serif"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Atualizando o gráfico a cada 5 segundos (5000 ms)
+        setInterval(updateChart, 5000);
+
+        // Inicializando a primeira atualização
+        updateChart();
+    </script>
+</body>
+</html>
