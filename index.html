@@ -1,95 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uso Futurista de Redes Sociais - Tempo Real</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estatísticas de Redes Sociais - Futurista</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Redes Sociais em 2024 (Tempo Real)</h1>
-        <canvas id="socialMediaChart"></canvas>
-    </div>
+  <header>
+    <h1>Estatísticas de Redes Sociais no Mundo</h1>
+    <p>Você sabia que o mundo tem <strong>7.888 bilhões</strong> de pessoas e que aproximadamente <strong>5.04 bilhões</strong> estão conectadas em alguma rede social? 
+    Elas passam em média <strong>2 horas e 38 minutos</strong> conectadas.</p>
+    <p>Isso significa que aproximadamente <strong>63.89%</strong> das pessoas estão conectadas em alguma rede social.</p>
+  </header>
 
-    <script>
-        // Inicializando o gráfico
-        const ctx = document.getElementById('socialMediaChart').getContext('2d');
-        let socialMediaChart = null;
+  <section>
+    <h2>Redes sociais com mais usuários no mundo</h2>
+    <canvas id="socialChart"></canvas>
+  </section>
 
-        // Função para buscar dados de uma API (simulação neste exemplo)
-        function fetchSocialMediaData() {
-            // Simulando dados em tempo real (substitua essa parte com uma API real)
-            const data = {
-                labels: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn', 'TikTok'],
-                datasets: [{
-                    label: 'Usuários em milhões',
-                    data: [
-                        Math.floor(Math.random() * 1500) + 500,  // Instagram
-                        Math.floor(Math.random() * 2500) + 1000, // Facebook
-                        Math.floor(Math.random() * 700) + 300,   // Twitter
-                        Math.floor(Math.random() * 1000) + 200,  // LinkedIn
-                        Math.floor(Math.random() * 1500) + 500   // TikTok
-                    ],
-                    backgroundColor: [
-                        'rgba(0, 255, 255, 0.6)',
-                        'rgba(255, 0, 255, 0.6)',
-                        'rgba(0, 255, 132, 0.6)',
-                        'rgba(255, 255, 0, 0.6)',
-                        'rgba(132, 0, 255, 0.6)'
-                    ],
-                    borderColor: [
-                        'rgba(0, 255, 255, 1)',
-                        'rgba(255, 0, 255, 1)',
-                        'rgba(0, 255, 132, 1)',
-                        'rgba(255, 255, 0, 1)',
-                        'rgba(132, 0, 255, 1)'
-                    ],
-                    borderWidth: 2
-                }]
-            };
-            return data;
-        }
+  <footer>
+    <p>Dados atualizados em tempo real. Conecte-se nas suas redes favoritas:</p>
+    <ul>
+      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+      <li><a href="https://whatsapp.com" target="_blank">WhatsApp</a></li>
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
+    </ul>
+  </footer>
 
-        // Função para atualizar o gráfico com novos dados
-        function updateChart() {
-            const newData = fetchSocialMediaData();
-
-            if (socialMediaChart) {
-                socialMediaChart.data.datasets[0].data = newData.datasets[0].data;
-                socialMediaChart.update();
-            } else {
-                socialMediaChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: newData,
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        },
-                        plugins: {
-                            legend: {
-                                labels: {
-                                    color: '#00ffcc',
-                                    font: {
-                                        size: 16,
-                                        family: "'Orbitron', sans-serif"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-        }
-
-        // Atualizando o gráfico a cada 5 segundos (5000 ms)
-        setInterval(updateChart, 5000);
-
-        // Inicializando a primeira atualização
-        updateChart();
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
