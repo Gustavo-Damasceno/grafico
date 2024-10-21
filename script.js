@@ -7,20 +7,20 @@ const data = {
         label: 'Bilhões de usuários ativos',
         data: [2900, 2500, 2000, 1500, 1000],
         backgroundColor: [
-            'rgba(59, 89, 152, 0.8)', // Facebook
-            'rgba(255, 0, 0, 0.8)',   // YouTube
-            'rgba(37, 211, 102, 0.8)',// WhatsApp
-            'rgba(225, 48, 108, 0.8)',// Instagram
-            'rgba(0, 0, 0, 0.8)'      // TikTok
+            '#7f00ff', // Roxo vibrante
+            '#9f00ff', // Roxo mais claro
+            '#bf00ff', // Roxo ainda mais claro
+            '#df00ff', // Roxo brilhante
+            '#ff00ff'  // Fúcsia
         ],
         borderColor: [
-            'rgba(59, 89, 152, 1)',
-            'rgba(255, 0, 0, 1)',
-            'rgba(37, 211, 102, 1)',
-            'rgba(225, 48, 108, 1)',
-            'rgba(0, 0, 0, 1)'
+            '#7f00ff',
+            '#9f00ff',
+            '#bf00ff',
+            '#df00ff',
+            '#ff00ff'
         ],
-        borderWidth: 1
+        borderWidth: 2
     }]
 };
 

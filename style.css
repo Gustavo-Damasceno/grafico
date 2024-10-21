@@ -1,29 +1,28 @@
 body {
     font-family: 'Orbitron', sans-serif;
-    background-color: #000;
-    color: #0ff;
+    background-color: #1c1c3c; /* Roxo escuro como cor de fundo */
+    color: #fff;
     margin: 0;
     padding: 0;
     text-align: center;
   }
   
   header {
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 30px;
-    background: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(0,138,255,1) 100%);
-    border: 1px solid #0ff;
-    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+    background-color: #2d2d66; /* Roxo intermediário */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #7f00ff; /* Roxo vibrante */
   }
   
   h1 {
-    color: #fff;
-    font-size: 2.5em;
-    text-shadow: 0 0 10px #00f;
+    color: #e0e0ff;
+    font-size: 2.2em;
   }
   
   p {
-    color: #fff;
-    font-size: 1.2em;
+    color: #c9c9f0;
+    font-size: 1.3em;
   }
   
   section {
@@ -31,21 +30,23 @@ body {
   }
   
   canvas {
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 0 20px rgba(0,255,255,0.6);
-    border-radius: 15px;
+    background-color: #2d2d66; /* Fundo roxo intermediário para o gráfico */
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(127, 0, 255, 0.5); /* Efeito neon */
+    padding: 15px;
   }
   
   footer {
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #111;
-    box-shadow: 0 0 20px rgba(0,255,255,0.6);
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #2d2d66; /* Roxo intermediário */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   }
   
   footer p {
-    color: #0ff;
+    color: #fff;
     font-size: 1.2em;
   }
   
@@ -56,18 +57,17 @@ body {
   
   ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
   }
   
   ul li a {
-    color: #00ffcc;
-    font-size: 1.5em;
+    color: #7f00ff; /* Roxo vibrante */
+    font-size: 1.3em;
     text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s;
   }
   
   ul li a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #00ffcc;
+    color: #c4a2ff; /* Roxo mais claro ao passar o mouse */
   }
   
